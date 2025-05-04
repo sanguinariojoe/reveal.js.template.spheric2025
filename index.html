@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>SET THE TITLE HERE</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,24 +16,54 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+
+<section data-spheric-logo="">
+	<h2>SET THE TITLE HERE</h2>
+	<small>SET THE AUTHOR HERE</small>
+</section>
+
+<section>
+	You can add the SPHERIC logo just adding the 'data-spheric-logo' attribute:
+	to the slide
+	<pre><code><script type="text/template">
+<section data-spheric-logo="">
+	...
+</section>
+	</script></code></pre>
+</section>
+
+<section>
+	And you are always entitled to get rid of the background
+	<pre><code><script type="text/template">
+<section data-background-image="my_custom_background.png">
+	...
+</section>
+	</script></code></pre>
+</section>
+
 			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="plugin/spheric2025/spheric.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				autoPlayMedia: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown,
+				           RevealHighlight,
+				           RevealNotes,
+				           RevealMath.KaTeX ]
 			});
 		</script>
 	</body>
